@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Livewire\Hola;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,3 +27,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('hola', Hola::class);
+
+
