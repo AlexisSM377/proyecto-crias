@@ -14,5 +14,9 @@ class Proveedor extends Model
      *
      * @var string
      */
+    protected $fillable = [
+        'name'
+    ];
+
     protected $table = 'proveedores';
 }

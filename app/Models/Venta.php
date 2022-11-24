@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Venta extends Model
 {
     use HasFactory;
+
+    /**
+     * Relación a de venta a cliente.
+     */
+    public function cliente()
+    {
+        return $this->hasMany(Cliente::class);
+    }
+
 }

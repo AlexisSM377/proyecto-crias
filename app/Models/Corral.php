@@ -15,4 +15,16 @@ class Corral extends Model
      * @var string
      */
     protected $table = 'corrales';
+
+    protected $guarded = [
+        'corral_tipos_id'
+    ];
+
+    /**
+     * Relación con tipo corral del corral.
+     */
+    public function corralTipo()
+    {
+        return $this->hasOne(CorralTipo::class);
+    }
 }
